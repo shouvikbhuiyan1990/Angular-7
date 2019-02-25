@@ -1,0 +1,10 @@
+
+<div class="container">
+  <input type="text" 
+    [(ngModel)]="name"
+    (input) = "onInputChange($event)" />
+  <p>{{name}}</p>
+  <app-servers></app-servers>
+</div>
+
+<router-outlet></router-outlet>
