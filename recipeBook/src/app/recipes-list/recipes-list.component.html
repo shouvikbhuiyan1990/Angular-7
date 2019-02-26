@@ -2,6 +2,13 @@
   <button class="btn btn-success">New Recipe</button>
   <hr />
 </div>
-<div *ngFor="let recipe of Recipes">
-  <app-recipe-item [recipe]="recipe"></app-recipe-item>
+<div  class="recipe-container">
+  <div>
+    <div *ngFor="let recipe of Recipes">
+      <app-recipe-item [recipe]="recipe"></app-recipe-item>
+    </div>
+  </div>
+  <div>
+    <app-recipe-detail></app-recipe-detail>
+  </div>
 </div>
