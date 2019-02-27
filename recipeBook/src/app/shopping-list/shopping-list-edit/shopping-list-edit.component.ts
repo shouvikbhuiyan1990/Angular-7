@@ -9,7 +9,7 @@ export class ShoppingListEditComponent implements OnInit {
   itemName= "";
   itemAmount= 0;
 
-  @Output() onIngrediantAddedProp =  new EventEmitter<{name:String, amount:Number}>();
+  @Output() onIngrediantAddedProp =  new EventEmitter<{amount:Number, itemName:String}>();
 
   constructor() { }
 
@@ -18,8 +18,8 @@ export class ShoppingListEditComponent implements OnInit {
 
   onIngrediantAdded() {
     this.onIngrediantAddedProp.emit({
-      name: this.itemName,
-      amount: this.itemAmount
+      amount: this.itemAmount,
+      itemName: this.itemName
     });
   }
   
