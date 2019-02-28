@@ -1,7 +1,7 @@
-<app-navigation-bar></app-navigation-bar>
+<app-navigation-bar (navigationClick)="navigationClick($event)"></app-navigation-bar>
 <div class="container">
-  <app-recipes-list></app-recipes-list>
-  <app-shopping-list></app-shopping-list>
+  <app-recipes-list *ngIf="navItem === 'recipes'"></app-recipes-list>
+  <app-shopping-list *ngIf="navItem === 'shopping'"></app-shopping-list>
 </div>
 
 <router-outlet></router-outlet>

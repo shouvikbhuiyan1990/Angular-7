@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'recipeBook';
+  title:String = 'recipeBook';
+  navItem: String = 'recipes';
+
+  navigationClick(event) {
+    this.navItem = event.type;
+  }
 }
