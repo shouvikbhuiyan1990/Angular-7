@@ -5,10 +5,13 @@
 <div  class="recipe-container">
   <div>
     <div *ngFor="let recipe of Recipes">
-      <app-recipe-item [recipe]="recipe"></app-recipe-item>
+      <app-recipe-item 
+        [recipe]="recipe"
+        (recipeItemClick) = "recipeItemClicked(recipe)"
+      ></app-recipe-item>
     </div>
   </div>
   <div>
-    <app-recipe-detail></app-recipe-detail>
+    <app-recipe-detail [recipe]="detailedRecipe"></app-recipe-detail>
   </div>
 </div>
