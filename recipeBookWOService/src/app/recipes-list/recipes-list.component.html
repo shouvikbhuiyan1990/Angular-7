@@ -1,0 +1,17 @@
+<div>
+  <button class="btn btn-success">New Recipe</button>
+  <hr />
+</div>
+<div  class="recipe-container">
+  <div>
+    <div *ngFor="let recipe of Recipes">
+      <app-recipe-item 
+        [recipe]="recipe"
+        (recipeItemClick) = "recipeItemClicked(recipe)"
+      ></app-recipe-item>
+    </div>
+  </div>
+  <div>
+    <app-recipe-detail [recipe]="detailedRecipe"></app-recipe-detail>
+  </div>
+</div>
